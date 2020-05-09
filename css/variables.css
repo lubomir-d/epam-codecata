@@ -1,0 +1,17 @@
+/* Colors */
+
+:root {
+	--white: #ffffff;
+	--grey-1: #f4f5f7;
+	--grey-2: #e1e4e9;
+	--grey-3: #babdbe;
+	--grey-4: #6d8ea2;
+	--grey-5: #272f42;
+	--black: #172b4d;
+
+	--blue: #2980b9;
+	--blue-2: #3c4fa0;
+	--blue-hover: #6879c1;
+	--orange: #e67e22;
+	--red: #c0392b;
+}

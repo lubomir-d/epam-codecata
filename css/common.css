@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	font-size: 62.5%;
+}
+
+body {
+	height: 100%;
+
+	margin: 0;
+
+	font-size: 1.4rem;
+	font-family: "Roboto";
+	color: var(--black);
+
+	background-color: var(--grey-1);
+}
+
+.page {
+	display: grid;
+	grid-template-rows: 6rem 1fr 6rem;
+	grid-row-gap: 1rem;
+
+	min-height: 100vh;
+
+	background: rgb(202,128,165);
+background: -webkit-linear-gradient(bottom, 
+	rgba(202,128,165,1) 0%, 
+	rgba(122,111,186,1) 42%,
+	rgba(58,128,222,1) 100%);
+background: -o-linear-gradient(bottom, 
+	rgba(202,128,165,1) 0%, 
+	rgba(122,111,186,1) 42%,
+	rgba(58,128,222,1) 100%);
+background: linear-gradient(to top, 
+	rgba(202,128,165,1) 0%, 
+	rgba(122,111,186,1) 42%,
+	rgba(58,128,222,1) 100%);
+}
+
+.container {
+	width: calc(100% - 3.2rem);
+	margin: 0 auto;
+}
+
+.h1,
+.h2,
+.h3,
+.h4 {
+	margin: 0;
+}
+
+.h1 {
+	font-size: 1.8rem;
+	line-height: 3.2rem;
+	font-weight: 700;
+}
+
+._checkbox-hidden {
+	position: absolute;
+	top: -1000%;
+	left: -1000%;
+	opacity: 0;
+}
+
+._flex-column {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+}
+
+.form-group {
+	margin: 1.2rem 0;
+}
+
+.label {
+	display: inline-block;
+	margin-bottom: .8rem;
+}
+
+.form-control {
+	display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+   
+    line-height: 1.5;
+    color: var(--black);
+    border: 1px solid var(--grey-3);
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+.form-control:focus {
+	border-color: var(--grey-5)
+}

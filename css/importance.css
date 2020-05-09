@@ -1,0 +1,85 @@
+.importance-list {
+	position: relative;
+	display: flex;
+	padding: 1.2rem 0;
+}
+
+.importance__input {
+	position: absolute;
+  	opacity: 0;
+  	cursor: pointer;
+  	height: 0;
+  	width: 0;
+  	margin: 0;
+}
+
+.importance__label {
+	position: absolute;
+	top: -2.2rem;
+	right: 0;
+	font-weight: bold;
+	margin: 0 2px;
+	color: var(--grey-4);
+
+	transition: .5s;
+
+	cursor: pointer;
+}
+
+.importance__label:nth-child(2) {
+	right: 3.2rem;
+}
+
+.importance__label:nth-child(4) {
+	right: 1.6rem;
+}
+.importance__label:nth-child(4)::before {
+	content: "︿";
+	position: absolute;
+	top: -4px;
+	right: 0;
+}
+
+.importance__label:nth-child(6)::before {
+	content: "︿";
+	position: absolute;
+	top: -4px;
+	right: 0;
+}
+.importance__label:nth-child(6)::after {
+	content: "︿";
+	position: absolute;
+	top: -8px;
+	right: 0;
+}
+
+.importance__line {
+	height: 6px;
+
+	transition: 1s cubic-bezier(.63,-0.88,.2,1.8);
+}
+
+.importance__input:nth-child(n+1):checked + .importance__label {
+	color: var(--blue);
+}
+
+.importance__input:nth-child(n+3):checked + .importance__label {
+	color: var(--orange);
+}
+
+.importance__input:nth-child(n+5):checked + .importance__label {
+	color: var(--red);
+}
+
+.importance__input:nth-child(n+1):checked ~ .importance__line {
+	width: 33.333%; 
+	background: var(--blue);
+}
+.importance__input:nth-child(n+3):checked ~ .importance__line {
+	width: 66.666%; 
+	background: var(--orange);
+}
+.importance__input:nth-child(n+5):checked ~ .importance__line {
+	width: 100%; 
+	background: var(--red);
+}
